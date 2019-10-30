@@ -16,12 +16,12 @@
 		
 		<p class="lead">Set search rules.</p>
 		
-		<form>
+		<form id="searchForm" method="get" action="/results.php">
 			<div id="rules">
 			
 				<div class="form-row rule">
 					<div class="col-sm-3">
-						<select class="form-control" required>
+						<select name="field[]" class="form-control" required>
 							<option value="" disabled selected hidden>Field...</option>
 							<option value="1">size</option>
 							<option value="2">forks</option>
@@ -30,7 +30,7 @@
 						</select>
 					</div>
 					<div class="col-sm-3">
-						<select class="form-control" required>
+						<select name="operator[]" class="form-control" required>
 							<option value="" disabled selected hidden>Operator...</option>
 							<option value="1">&lt;</option>
 							<option value="2">=</option>
@@ -38,14 +38,15 @@
 						</select>
 					</div>
 					<div class="col-sm-3">
-						<input 	class="form-control"
+						<input 	name="value[]"
+								class="form-control"
 								type="number" required
 								step="1" min="0"
 								placeholder="Value..." />
 					</div>
 
 					<div class="col-sm-3">
-						<button class="btn btn-danger float-right rule-delete">Delete</button>
+						<button class="btn btn-danger float-right rule-delete" type="button">Delete</button>
 					</div>
 				</div>
 				
@@ -53,15 +54,16 @@
 			<div class="form-row">
 				<div class="col-sm-9">
 					<button class="btn btn-primary" type="submit">Apply</button>
-					<button class="btn btn-warning" id="rulesClear">Clear</button>
+					<button class="btn btn-warning" type="button" id="rulesClear">Clear</button>
 				</div>
 				<div class="col-sm-3">
-					<button class="btn btn-success float-right" id="rulesAdd">Add Rule</button>
+					<button class="btn btn-success float-right" type="button" id="rulesAdd">Add Rule</button>
 				</div>
 			</div>
 		</form>
 	</section>
 	
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="/js/scripts.js"></script>
 </body>
 </html>
