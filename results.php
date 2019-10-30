@@ -38,20 +38,19 @@ if( isset($_GET['field']) && count($_GET['field']) )
 					<th scope="col">Stars</th>
 				</tr>
 			</thead>
+			<tbody>
 			<?php
 			
 			foreach($results as $repo)
 			{
 				printf('
-			<tbody>
 				<tr>
 					<td><a href="https://github.com/%s" title="%s" target="_blank">%s</a></td>
 					<td>%s</td>
 					<td>%d</td>
 					<td>%d</td>
 					<td>%d</td>
-				</tr>
-			</tbody>',
+				</tr>',
 					   $repo["full_name"],
 					   $repo["full_name"],
 					   $repo["name"],
@@ -63,6 +62,7 @@ if( isset($_GET['field']) && count($_GET['field']) )
 			}
 			
 			?>
+			</tbody>
 		</table>
 		
 		<a href="/">back</a>
