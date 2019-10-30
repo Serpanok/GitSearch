@@ -1,0 +1,19 @@
+﻿@charset "utf-8";
+
+.container
+{
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+#rules
+{
+	margin-bottom: 20px;
+	border-bottom: 1px solid silver;
+}
+
+#rules .rule
+{
+	margin-bottom: 10px;
+}
