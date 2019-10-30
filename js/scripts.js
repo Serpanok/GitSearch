@@ -45,9 +45,7 @@ document.getElementById('searchForm').addEventListener('submit', function(event)
 		results.innerHTML = ''
 		
 		for(let key in json.items)
-		{
-			console.log(key)
-			
+		{			
 			let item = json.items[key]
 			
 			let Name = document.createElement('td')
