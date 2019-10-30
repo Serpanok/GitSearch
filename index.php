@@ -63,6 +63,22 @@
 		</form>
 	</section>
 	
+	<section class="container mt-3">
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Size</th>
+					<th scope="col">Forks</th>
+					<th scope="col">Followers</th>
+					<th scope="col">Stars</th>
+				</tr>
+			</thead>
+			<tbody id="results">
+			</tbody>
+		</table>
+	</section>
+	
 	<script type="text/javascript" src="/js/scripts.js"></script>
 </body>
 </html>
